@@ -1,0 +1,470 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Material Teórico Scratch - Emoji Protagonista</title>
+    <style>
+        body {
+            font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+            max-width: 800px;
+            margin: 0 auto;
+            padding: 20px;
+            background-color: #f5f5f5;
+            color: #333;
+        }
+        .header {
+            background-color: #FF9900;
+            color: white;
+            padding: 15px;
+            border-radius: 10px;
+            text-align: center;
+            margin-bottom: 20px;
+        }
+        .section {
+            background-color: white;
+            border-radius: 10px;
+            padding: 15px;
+            margin-bottom: 20px;
+            box-shadow: 0 2px 5px rgba(0,0,0,0.1);
+        }
+        .section-title {
+            color: #4D97FF;
+            border-bottom: 2px solid #4D97FF;
+            padding-bottom: 5px;
+        }
+        .concept-box {
+            background-color: #E9F1FF;
+            border-left: 4px solid #4D97FF;
+            padding: 10px;
+            margin: 10px 0;
+        }
+        .code-example {
+            background-color: #2E2E2E;
+            color: #FFFFFF;
+            padding: 10px;
+            border-radius: 5px;
+            font-family: monospace;
+            margin: 10px 0;
+        }
+        .emoji-example {
+            font-size: 40px;
+            text-align: center;
+            margin: 15px 0;
+        }
+        .tip {
+            background-color: #FFF9C4;
+            border-left: 4px solid #FFD600;
+            padding: 10px;
+            margin: 10px 0;
+        }
+        .activity {
+            background-color: #E8F5E9;
+            border-left: 4px solid #4CAF50;
+            padding: 10px;
+            margin: 10px 0;
+        }
+        .story-activity {
+            background-color: #F3E5F5;
+            border-left: 4px solid #9C27B0;
+            padding: 10px;
+            margin: 10px 0;
+        }
+        .animation-activity {
+            background-color: #FFEBEE;
+            border-left: 4px solid #F44336;
+            padding: 10px;
+            margin: 10px 0;
+        }
+        .footer {
+            text-align: center;
+            margin-top: 30px;
+            color: #666;
+            font-size: 0.9em;
+        }
+        .story-element {
+            margin: 10px 0;
+            padding: 8px;
+            background-color: #FFF;
+            border-radius: 5px;
+        }
+        .animation-demo {
+            display: flex;
+            justify-content: space-around;
+            align-items: center;
+            margin: 15px 0;
+            padding: 10px;
+            background-color: #FFF;
+            border-radius: 8px;
+        }
+        .animation-step {
+            text-align: center;
+            padding: 10px;
+        }
+        .emoji-large {
+            font-size: 50px;
+            margin: 10px 0;
+        }
+        .arrow {
+            font-size: 30px;
+            color: #4D97FF;
+        }
+    </style>
+</head>
+<body>
+    <div class="header">
+        <h1>Material Teórico: Scratch para Videojuegos</h1>
+        <h2>Creando nuestro Emoji Protagonista</h2>
+    </div>
+
+    <div class="section">
+        <h2 class="section-title">¿Qué es Scratch?</h2>
+        <p>Scratch es un lenguaje de programación visual creado por el MIT que nos permite crear historias interactivas, juegos y animaciones mediante bloques de código que encajan como piezas de rompecabezas.</p>
+        
+        <div class="concept-box">
+            <h3>Conceptos Básicos:</h3>
+            <ul>
+                <li><strong>Escenario:</strong> El fondo donde ocurre la acción</li>
+                <li><strong>Objetos (Sprites):</strong> Personajes u objetos que interactúan</li>
+                <li><strong>Bloques:</strong> Piezas de código que encajan entre sí</li>
+                <li><strong>Scripts:</strong> Conjuntos de bloques que forman programas</li>
+            </ul>
+        </div>
+    </div>
+
+    <div class="section">
+        <h2 class="section-title">Animación del Emoji: ¡Dale Vida!</h2>
+        
+        <div class="animation-activity">
+            <h3>1. Animación con Cambio de Disfraces</h3>
+            <p>Crea varios disfraces para tu emoji y alterna entre ellos:</p>
+            
+            <div class="animation-demo">
+                <div class="animation-step">
+                    <div class="emoji-large">😊</div>
+                    <div>Disfraz 1</div>
+                </div>
+                <div class="arrow">→</div>
+                <div class="animation-step">
+                    <div class="emoji-large">😃</div>
+                    <div>Disfraz 2</div>
+                </div>
+                <div class="arrow">→</div>
+                <div class="animation-step">
+                    <div class="emoji-large">😄</div>
+                    <div>Disfraz 3</div>
+                </div>
+            </div>
+            
+            <div class="code-example">
+                al presionar bandera verde<br>
+                por siempre<br>
+                &nbsp;&nbsp;cambiar disfraz a [emoji normal]<br>
+                &nbsp;&nbsp;esperar (0.5) segundos<br>
+                &nbsp;&nbsp;cambiar disfraz a [emoji parpadeando]<br>
+                &nbsp;&nbsp;esperar (0.2) segundos<br>
+                &nbsp;&nbsp;cambiar disfraz a [emoji normal]
+            </div>
+        </div>
+        
+        <div class="animation-activity">
+            <h3>2. Efectos Especiales con Cambios de Tamaño</h3>
+            <p>Haz que tu emoji crezca y se encoja para simular respiración:</p>
+            
+            <div class="code-example">
+                al presionar bandera verde<br>
+                por siempre<br>
+                &nbsp;&nbsp;repetir (10)<br>
+                &nbsp;&nbsp;&nbsp;&nbsp;cambiar tamaño en (2)<br>
+                &nbsp;&nbsp;&nbsp;&nbsp;esperar (0.1) segundos<br>
+                &nbsp;&nbsp;repetir (10)<br>
+                &nbsp;&nbsp;&nbsp;&nbsp;cambiar tamaño en (-2)<br>
+                &nbsp;&nbsp;&nbsp;&nbsp;esperar (0.1) segundos
+            </div>
+        </div>
+        
+        <div class="animation-activity">
+            <h3>3. Animación de Salto</h3>
+            <p>Crea un efecto de salto cuando el emoji se mueve:</p>
+            
+            <div class="code-example">
+                al presionar tecla [espacio v]<br>
+                repetir (5)<br>
+                &nbsp;&nbsp;cambiar y por (10)<br>
+                &nbsp;&nbsp;cambiar tamaño en (5)<br>
+                &nbsp;&nbsp;esperar (0.1) segundos<br>
+                repetir (5)<br>
+                &nbsp;&nbsp;cambiar y por (-10)<br>
+                &nbsp;&nbsp;cambiar tamaño en (-5)<br>
+                &nbsp;&nbsp;esperar (0.1) segundos
+            </div>
+        </div>
+        
+        <div class="animation-activity">
+            <h3>4. Efectos de Transición entre Estados</h3>
+            <p>Anima los cambios de estado de tu emoji:</p>
+            
+            <div class="code-example">
+                definir cambiar a feliz<br>
+                repetir (5)<br>
+                &nbsp;&nbsp;cambiar tamaño en (3)<br>
+                &nbsp;&nbsp;cambiar [brillo v] efecto en (10)<br>
+                &nbsp;&nbsp;esperar (0.1) segundos<br>
+                cambiar disfraz a [emoji feliz v]<br>
+                repetir (5)<br>
+                &nbsp;&nbsp;cambiar tamaño en (-3)<br>
+                &nbsp;&nbsp;cambiar [brillo v] efecto en (-10)<br>
+                &nbsp;&nbsp;esperar (0.1) segundos
+            </div>
+        </div>
+        
+        <div class="animation-activity">
+            <h3>5. Animación de Movimiento Fluido</h3>
+            <p>Haz que el movimiento sea más natural:</p>
+            
+            <div class="code-example">
+                al presionar tecla [derecha v]<br>
+                apuntar en dirección (90)<br>
+                repetir (5)<br>
+                &nbsp;&nbsp;mover (4) pasos<br>
+                &nbsp;&nbsp;cambiar tamaño en (1)<br>
+                &nbsp;&nbsp;esperar (0.05) segundos<br>
+                repetir (5)<br>
+                &nbsp;&nbsp;mover (4) pasos<br>
+                &nbsp;&nbsp;cambiar tamaño en (-1)<br>
+                &nbsp;&nbsp;esperar (0.05) segundos
+            </div>
+        </div>
+        
+        <div class="animation-activity">
+            <h3>6. Partículas y Efectos Visuales</h3>
+            <p>Añade estrellas o corazones cuando el emoji está feliz:</p>
+            
+            <div class="code-example">
+                definir mostrar efecto felicidad<br>
+                crear clone de [estrellas v]<br>
+                cambiar disfraz a [emoji feliz v]<br>
+                repetir (10)<br>
+                &nbsp;&nbsp;cambiar [color v] efecto en (25)<br>
+                &nbsp;&nbsp;esperar (0.1) segundos<br>
+                fijar [color v] efecto en (0)
+            </div>
+        </div>
+    </div>
+
+    <div class="section">
+        <h2 class="section-title">Bloques Fundamentales para Nuestro Emoji</h2>
+        
+        <div class="concept-box">
+            <h3>1. Movimiento</h3>
+            <p>Estos bloques controlan cómo se mueve nuestro emoji:</p>
+            <div class="code-example">
+                mover (10) pasos<br>
+                girar ↻ (15) grados<br>
+                ir a x: (0) y: (0)<br>
+                apuntar en dirección (90)
+            </div>
+        </div>
+        
+        <div class="concept-box">
+            <h3>2. Apariencia</h3>
+            <p>Estos bloques cambian cómo se ve nuestro emoji:</p>
+            <div class="code-example">
+                decir (¡Hola!) durante (2) segundos<br>
+                cambiar disfraz a (emoji feliz)<br>
+                cambiar tamaño en (10)<br>
+                mostrar / ocultar
+            </div>
+        </div>
+        
+        <div class="concept-box">
+            <h3>3. Eventos</h3>
+            <p>Estos bloques inician nuestras acciones:</p>
+            <div class="code-example">
+                al presionar bandera verde<br>
+                al presionar tecla (espacio)<br>
+                al hacer clic en este objeto
+            </div>
+        </div>
+        
+        <div class="concept-box">
+            <h3>4. Control</h3>
+            <p>Estos bloques controlan el flujo de nuestro programa:</p>
+            <div class="code-example">
+                esperar (1) segundos<br>
+                repetir (10)<br>
+                si (tocando color azul?) entonces<br>
+                &nbsp;&nbsp;cambiar disfraz a (emoji triste)
+            </div>
+        </div>
+    </div>
+
+    <div class="section">
+        <h2 class="section-title">Estructura Básica de un Videojuego</h2>
+        
+        <div class="concept-box">
+            <h3>1. Inicio del Juego</h3>
+            <div class="code-example">
+                al presionar bandera verde<br>
+                ir a x: (0) y: (0)<br>
+                fijar tamaño a (100)%<br>
+                cambiar disfraz a (emoji normal)
+            </div>
+        </div>
+        
+        <div class="concept-box">
+            <h3>2. Controles del Jugador</h3>
+            <div class="code-example">
+                al presionar tecla (flecha arriba v)<br>
+                cambiar y por (10)<br>
+                <br>
+                al presionar tecla (flecha abajo v)<br>
+                cambiar y por (-10)
+            </div>
+        </div>
+        
+        <div class="concept-box">
+            <h3>3. Reglas del Juego</h3>
+            <div class="code-example">
+                por siempre<br>
+                &nbsp;&nbsp;si (tocando (obstáculo)) entonces<br>
+                &nbsp;&nbsp;&nbsp;&nbsp;cambiar disfraz a (emoji triste)<br>
+                &nbsp;&nbsp;&nbsp;&nbsp;decir (¡Perdiste!) durante (2) segundos<br>
+                &nbsp;&nbsp;&nbsp;&nbsp;detener (todo)
+            </div>
+        </div>
+    </div>
+
+    <div class="section">
+        <h2 class="section-title">Aplicando Nuestras Reglas del Emoji</h2>
+        <p>Recordemos las reglas que creamos para nuestro emoji y cómo implementarlas:</p>
+        
+        <div class="emoji-example">😊 → 😃 (al resolver un problema)</div>
+        <div class="code-example">
+            si (tocando (problema)) entonces<br>
+            &nbsp;&nbsp;cambiar disfraz a (emoji feliz)<br>
+            &nbsp;&nbsp;decir (¡Problema resuelto!)
+        </div>
+        
+        <div class="emoji-example">😊 → 😔 (al encontrar un obstáculo)</div>
+        <div class="code-example">
+            si (tocando (obstáculo)) entonces<br>
+            &nbsp;&nbsp;cambiar disfraz a (emoji triste)<br>
+            &nbsp;&nbsp;decir (¡Oh no!) durante (1) segundos
+        </div>
+        
+        <div class="emoji-example">😊 → 😎 (al conseguir un poder)</div>
+        <div class="code-example">
+            si (tocando (poder)) entonces<br>
+            &nbsp;&nbsp;cambiar disfraz a (emoji con lentes)<br>
+            &nbsp;&nbsp;cambiar tamaño en (20)<br>
+            &nbsp;&nbsp;decir (¡Superpoder activado!)
+        </div>
+    </div>
+
+    <div class="section">
+        <h2 class="section-title">Actividad: ¡Crea la Historia de tu Emoji!</h2>
+        
+        <div class="story-activity">
+            <h3>Paso 1: Diseña la historia de fondo</h3>
+            <p>Todo buen protagonista necesita una historia. Piensa en:</p>
+            
+            <div class="story-element">
+                <strong>¿Quién es tu emoji?</strong>
+                <p>Ejemplo: "Emi el Emoji era un emoji normal que vivía en la Tierra de los Emojis..."</p>
+            </div>
+            
+            <div class="story-element">
+                <strong>¿Qué problema debe resolver?</strong>
+                <p>Ejemplo: "...hasta que un día, el Rey de los Emojis Tristes robó todas las sonrisas del reino."</p>
+            </div>
+            
+            <div class="story-element">
+                <strong>¿Cuál es su misión?</strong>
+                <p>Ejemplo: "Ahora Emi debe recorrer diferentes mundos para recuperar las sonrisas perdidas."</p>
+            </div>
+            
+            <div class="story-element">
+                <strong>¿Qué obstáculos encontrará?</strong>
+                <p>Ejemplo: "En su camino encontrará emojis tristes que intentarán hacerlo sentir mal, y puzzles que deberá resolver."</p>
+            </div>
+        </div>
+        
+        <div class="story-activity">
+            <h3>Paso 2: Programa la introducción de la historia</h3>
+            <p>Usa bloques de apariencia para contar la historia al inicio del juego:</p>
+            <div class="code-example">
+                al presionar bandera verde<br>
+                decir (¡Bienvenido a la aventura de Emi el Emoji!) durante (3) segundos<br>
+                esperar (1) segundos<br>
+                decir (El Rey Triste robó todas las sonrisas...) durante (3) segundos<br>
+                esperar (1) segundos<br>
+                decir (¡Ayuda a Emi a recuperarlas!) durante (3) segundos
+            </div>
+        </div>
+        
+        <div class="story-activity">
+            <h3>Paso 3: Conecta la historia con el gameplay</h3>
+            <p>Cada nivel o objetivo debe avanzar la historia:</p>
+            <div class="code-example">
+                cuando reciba mensaje [nivel 1 completado]<br>
+                cambiar disfraz a [emoji feliz]<br>
+                decir (¡Primera sonrisa recuperada! Solo faltan 4) durante (3) segundos<br>
+                enviar a todos [avanzar historia]
+            </div>
+        </div>
+    </div>
+
+    <div class="section">
+        <h2 class="section-title">Actividad Práctica: Diseña tu Emoji</h2>
+        
+        <div class="activity">
+            <h3>Paso 1: Crea los disfraces de tu emoji</h3>
+            <p>Diseña al menos 3 expresiones diferentes para tu emoji:</p>
+            <ul>
+                <li>Expresión normal</li>
+                <li>Expresión feliz (al resolver problemas)</li>
+                <li>Expresión triste (al encontrar obstáculos)</li>
+            </ul>
+        </div>
+        
+        <div class="activity">
+            <h3>Paso 2: Programa los movimientos básicos</h3>
+            <p>Haz que tu emoji se mueva con las teclas de flecha.</p>
+        </div>
+        
+        <div class="activity">
+            <h3>Paso 3: Añade interacciones</h3>
+            <p>Crea objetos que cambien la expresión de tu emoji al tocarlos.</p>
+        </div>
+    </div>
+
+    <div class="section">
+        <h2 class="section-title">Consejos para Crear Nuestro Videojuego</h2>
+        
+        <div class="tip">
+            <h3>Planifica Antes de Programar</h3>
+            <p>Dibuja en papel cómo quieres que sea tu juego: personajes, escenarios y reglas.</p>
+        </div>
+        
+        <div class="tip">
+            <h3>Empieza Simple</h3>
+            <p>Crea una versión básica primero y luego añade características más complejas.</p>
+        </div>
+        
+        <div class="tip">
+            <h3>Prueba Constantemente</h3>
+            <p>Después de cada cambio, prueba tu juego para asegurarte de que funciona como esperas.</p>
+        </div>
+        
+        <div class="tip">
+            <h3>Comparte y Pide Opiniones</h3>
+            <p>Muestra tu juego a compañeros y pídeles que lo prueben. Sus ideas pueden mejorarlo.</p>
+        </div>
+    </div>
+
+    <div class="footer">
+        <p>¡A programar se ha dicho! 🚀</p>
+    </div>
+</body>
+</html>
